@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home"
+    android:padding="16dp"
+    tools:context=".StartingScreenActivity">
+
+
+        <TextView
+            android:id="@+id/text_view_highscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button_start_quiz"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/boogaloo_regular"
+            android:gravity="center_horizontal"
+            android:text="Skor Tertinggimu : 0"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/button_start_quiz"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle_1"
+            android:fontFamily="@font/roboto_medium"
+            android:text="MULAI UJIAN"
+            android:textColor="#FFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_kategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_start_quiz"
+            android:layout_alignStart="@id/button_start_quiz"
+            android:layout_alignLeft="@id/button_start_quiz"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/boogaloo_regular"
+            android:text="Pilih Kategori Soalmu : "
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_kategori"
+            android:layout_alignStart="@+id/button_start_quiz"
+            android:layout_alignLeft="@+id/button_start_quiz"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFF"
+            android:padding="8dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_category"
+            android:layout_alignStart="@id/button_start_quiz"
+            android:layout_alignLeft="@id/button_start_quiz"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/boogaloo_regular"
+            android:text="Pilih Level Soalmu : "
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner_difficulty"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_level"
+            android:layout_alignStart="@+id/button_start_quiz"
+            android:layout_alignLeft="@+id/button_start_quiz"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFF"
+            android:padding="8dp"
+            android:textColor="#000" />
+
+
+</RelativeLayout>

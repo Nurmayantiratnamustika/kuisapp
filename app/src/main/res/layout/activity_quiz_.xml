@@ -5,40 +5,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundquiz"
     android:padding="16dp"
     tools:context=".Quiz_Activity">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: 0"
-        android:textColor="#FFFF"
+        android:text="Score : 0"
+        android:fontFamily="@font/boogaloo_regular"
+        android:textColor="#FFF"
+        android:textSize="18dp"
         android:id="@+id/text_view_score"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
+
         app:layout_constraintTop_toBottomOf="@id/jumsoal"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question: 1/x"
-        android:textColor="#FFFF"
+        android:text="Question : 1/x"
+        android:textSize="18dp"
+        android:fontFamily="@font/boogaloo_regular"
+        android:textColor="#FFF"
         android:layout_marginTop="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/jumsoal"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="18dp"
         />
 
     <TextView
+        android:id="@+id/countdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:text="00:30"
-        android:textColor="#FFFF"
+        android:fontFamily="@font/boogaloo_regular"
+        android:textColor="#FFF"
         android:textSize="40sp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -46,25 +65,105 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:background="@drawable/soal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <TextView
+        android:id="@+id/tet_view_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\nHere will be Question"
+        android:textAlignment="center"
+        android:fontFamily="@font/boogaloo_regular"
+        android:textColor="#000"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/jumsoal"
         android:layout_marginTop="90dp"
-        android:id="@+id/soal"/>
-    <ImageView
+        android:background="@drawable/soal1"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/text_view_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/jwb_a"
-        app:layout_constraintTop_toBottomOf="@id/soal"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp"/>
+        android:fontFamily="@font/boogaloo_regular"
+        android:freezesText="true"
+        android:text="Category: "
+        android:textColor="#FFF"
+        android:textSize="18dp"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jumsoal" />
 
+    <TextView
+        android:id="@+id/text_view_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf= "@id/text_view_category"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:freezesText="true"
+        android:text="Difficulty: "
+        android:textSize="18dp"
+        android:fontFamily="@font/boogaloo_regular"
+        android:textColor="#FFF"
+        app:layout_constraintHorizontal_bias="0.046"
+        />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tet_view_question"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/radio_group">
 
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="280dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/boogaloo_regular"
+            android:textSize="8pt"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jawab"
+            android:text="option 1" />
 
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="280dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/boogaloo_regular"
+            android:textSize="8pt"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jawab"
+            android:text="option 2" />
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="280dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/boogaloo_regular"
+            android:textSize="8pt"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/jawab"
+            android:text="option 3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_confirm_next"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/konfirm"
+        android:text="KONFIRMASI"
+        android:textSize="16dp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+
+        />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "241162275868",
+    "firebase_url": "https://loginregisterkuisapp.firebaseio.com",
+    "project_id": "loginregisterkuisapp",
+    "storage_bucket": "loginregisterkuisapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241162275868:android:322dafaa72e7216ceda3d9",
+        "android_client_info": {
+          "package_name": "com.nurmayanti.kuisapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241162275868-2bbiedvbds2nkarp8rba3e4i244t6q4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWPim-OVrS6V1HZUyuMDYp4rvMSdbHr2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241162275868-2bbiedvbds2nkarp8rba3e4i244t6q4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
